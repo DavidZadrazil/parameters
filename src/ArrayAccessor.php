@@ -83,6 +83,10 @@ class ArrayAccessor implements \ArrayAccess {
 		if (!$this->__isset($name)) {
 			throw new ParameterNotExistsException($name);
 		}
+		
+		if (!isset($this->data[$name]) 
+			return;
+
 		$value = &$this->data[$name];
 		if (is_array($value)) {
 			$this->arrayAccessors[$name] = TRUE;
