@@ -2,12 +2,14 @@
 
 namespace WebChemistry\Parameters\Database;
 
+use Nette;
 use Doctrine\ORM\EntityManager;
-use Nette\Object;
 use WebChemistry\Parameters\IDatabase;
 use WebChemistry\Parameters\IEntity;
 
-class Doctrine extends Object implements IDatabase {
+class Doctrine implements IDatabase {
+
+	use Nette\SmartObject;
 
 	/** @var \Doctrine\ORM\EntityManager */
 	private $em;
